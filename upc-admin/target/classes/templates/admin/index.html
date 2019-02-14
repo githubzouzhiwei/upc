@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>admin</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/admin/easyui/themes/default/easyui.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/admin/easyui/themes/icon.css}">
+	<script type="text/javascript" th:src="@{/admin/js/jquery.min.js}"></script>
+	<script type="text/javascript" th:src="@{/admin/easyui/jquery.easyui.min.js}"></script>
+	<style type="text/css">
+		html, body { height: 100%; }
+		body { margin: 0; }
+	</style>
+</head>
+<body>
+	<div class="easyui-layout" style="width: 100%; height: 100%;">
+		<div region="north" style="height: 5%;">
+			欢迎使用upc后台管理系统,admin
+			<a th:href="@{/admin/logout.do}">退出</a>
+		</div>
+		<div region="west" split="true" title="主菜单" style="width: 15%;">
+			<ul class="easyui-tree">
+		        <li>
+		        	<span>图片管理</span>
+		            <ul>
+                        <li><span>图片列表</span></li>
+                    </ul>
+		        </li>
+		    </ul>
+		</div>
+		<div region="center" class="easyui-tabs">
+	        <div title="我的主页" iconCls="icon-tip" style="padding:10px;">这里缺应用的个人主页内容，请补充。</div>
+	        <div title="图片列表" closable="true">
+	            <table id="dg" title="" class="easyui-datagrid" url="/admin/picture/list.do" toolbar="#toolbar" rownumbers="true" fitColumns="true" singleSelect="true">
+				    <thead>
+				        <tr>
+				            <th field="firstname" width="50">ID</th>
+				            <th field="lastname" width="50">URL</th>
+				        </tr>
+				    </thead>
+				</table>
+				<div id="toolbar">
+					<div>
+			            URL：<input type="text">
+			            <a href="#" class="easyui-linkbutton" iconCls="icon-search">查询</a>
+			        </div>
+				    <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">新增</a>
+				    <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">修改</a>
+				    <a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">删除</a>
+				</div>
+        	</div>
+	    </div>
+	</div>
+</body>
+</html>

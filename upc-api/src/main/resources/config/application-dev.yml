@@ -1,0 +1,22 @@
+server:
+  port: 8004
+  
+spring:
+  application:
+    name: upc-api
+  profiles: #引入其他profiles
+    include:
+      - 'db'
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://admin:123456@localhost:1111/eureka/

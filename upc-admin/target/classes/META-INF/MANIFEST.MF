@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: upc-admin
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: 0
+Implementation-Vendor-Id: com.zzw
+Build-Jdk: 1.8.0_141
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/upc/upc-admin
+Created-By: Maven Integration for Eclipse
+
